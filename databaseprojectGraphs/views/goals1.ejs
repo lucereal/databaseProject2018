@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test</title>
+	
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+	</head>
+  <body>
+		<script type="text/javascript">
+
+			window.onload = function () {
+				var chart = new CanvasJS.Chart("chartContainer");
+				chart.options.axisY = { title: "# Goals" };
+				chart.options.title = { text: "Premier League - Goals Per Country" };
+				chart.options.axisX = {interval: 1};
+				var series1 = { //dataSeries - first quarter
+					type: "pie",
+					name: "Countries",
+					showInLegend: true,
+					legendText: "{indexLabel}"
+				};
+	
+				chart.options.data = [];
+				chart.options.data.push(series1);
+				series1.dataPoints = [
+						{y: <%= result[0].numGoals/sumP %>, indexLabel: "<%= result[0].Nationality %>"},
+						{y: <%= result[1].numGoals/sumP %>, indexLabel: "<%= result[1].Nationality %>"},
+						{y: <%= result[2].numGoals/sumP %>, indexLabel: "<%= result[2].Nationality %>"},
+						{y: <%= result[3].numGoals/sumP %>, indexLabel: "<%= result[3].Nationality %>"},
+						{y: <%= result[4].numGoals/sumP %>, indexLabel: "<%= result[4].Nationality %>"},
+						{y: <%= result[5].numGoals/sumP %>, indexLabel: "<%= result[5].Nationality %>"},
+						{y: <%= result[6].numGoals/sumP %>, indexLabel: "<%= result[6].Nationality %>"},
+						{y: <%= result[7].numGoals/sumP %>, indexLabel: "<%= result[7].Nationality %>"},
+						{y: <%= result[8].numGoals/sumP %>, indexLabel: "<%= result[8].Nationality %>"},
+						{y: <%= result[9].numGoals/sumP %>, indexLabel: "<%= result[9].Nationality %>"},
+						{y: <%= otherP/sumP %>, indexLabel: "Other"}
+				];
+				chart.render();
+			}
+		</script>
+
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+<div class="container">
+      <form action="/goal2" method="get">
+		  <input type="submit" value="Next" > 
+       </form>	
+		<form action="/goal" method="get">
+		  <input type="submit" value="Previous" > 
+		</form>	
+</div>
+	
+	
+	</body>
+
+</html>

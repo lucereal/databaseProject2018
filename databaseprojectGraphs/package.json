@@ -1,0 +1,25 @@
+{
+  "name": "simplecalculator",
+  "version": "1.0.0",
+  "description": "playing around with nodejs, will try to use express, body-parser, request, to make a simple calculator. We will see how it goes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node db.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theSaltyConditional/nodejspractice.git"
+  },
+  "author": "David Tommy Lucero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theSaltyConditional/nodejspractice/issues"
+  },
+  "homepage": "https://github.com/theSaltyConditional/nodejspractice#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
+}

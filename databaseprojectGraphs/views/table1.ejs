@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test</title>
+	
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+	</head>
+  <body>
+		<script type="text/javascript">
+
+			window.onload = function () {
+				var chart = new CanvasJS.Chart("chartContainer");
+				chart.options.axisY = { title: "Goals" };
+				chart.options.title = { text: "Top 10 Goal Scorers In Europe" };
+				chart.options.axisX = {interval: 1};
+				var series1 = { //dataSeries - first quarter
+					type: "column",
+					name: "Player",
+					showInLegend: true
+				};
+	
+				chart.options.data = [];
+				chart.options.data.push(series1);
+				series1.dataPoints = [
+						{label: "<%= result[0].Name %>", y: <%= result[0].ratio %>},
+						{label: "<%= result[1].Name %>", y: <%= result[1].ratio %>},
+						{label: "<%= result[2].Name %>", y: <%= result[2].ratio %>},
+						{label: "<%= result[3].Name %>", y: <%= result[3].ratio %>},
+						{label: "<%= result[4].Name %>", y: <%= result[4].ratio %>},
+						{label: "<%= result[5].Name %>", y: <%= result[5].ratio %>},
+						{label: "<%= result[6].Name %>", y: <%= result[6].ratio %>},
+						{label: "<%= result[7].Name %>", y: <%= result[7].ratio %>},
+						{label: "<%= result[8].Name %>", y: <%= result[8].ratio %>},
+						{label: "<%= result[9].Name %>", y: <%= result[9].ratio %>}
+				];
+	
+				chart.render();
+			}
+		</script>
+
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+<div class="container">
+      <form action="/" method="get">
+		  <input type="submit" value="Home" > 
+       </form>		
+</div>
+	
+	
+	</body>
+
+</html>
