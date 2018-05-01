@@ -26,16 +26,16 @@
 				chart.options.data = [];
 				chart.options.data.push(series1);
 				series1.dataPoints = [
-						{y: <%= (result[0].numGoals/sumP)*100 %>, indexLabel: "<%= result[0].Nationality %>"},
-						{y: <%= (result[1].numGoals/sumP)*100 %>, indexLabel: "<%= result[1].Nationality %>"},
-						{y: <%= (result[2].numGoals/sumP)*100 %>, indexLabel: "<%= result[2].Nationality %>"},
-						{y: <%= (result[3].numGoals/sumP)*100 %>, indexLabel: "<%= result[3].Nationality %>"},
-						{y: <%= (result[4].numGoals/sumP)*100 %>, indexLabel: "<%= result[4].Nationality %>"},
-						{y: <%= (result[5].numGoals/sumP)*100 %>, indexLabel: "<%= result[5].Nationality %>"},
-						{y: <%= (result[6].numGoals/sumP)*100 %>, indexLabel: "<%= result[6].Nationality %>"},
-						{y: <%= (result[7].numGoals/sumP)*100 %>, indexLabel: "<%= result[7].Nationality %>"},
-						{y: <%= (result[8].numGoals/sumP)*100 %>, indexLabel: "<%= result[8].Nationality %>"},
-						{y: <%= (result[9].numGoals/sumP)*100 %>, indexLabel: "<%= result[9].Nationality %>"},
+						{y: <%= (result[0].ratio/sumP)*100 %>, indexLabel: "<%= result[0].Nationality %>"},
+						{y: <%= (result[1].ratio/sumP)*100 %>, indexLabel: "<%= result[1].Nationality %>"},
+						{y: <%= (result[2].ratio/sumP)*100 %>, indexLabel: "<%= result[2].Nationality %>"},
+						{y: <%= (result[3].ratio/sumP)*100 %>, indexLabel: "<%= result[3].Nationality %>"},
+						{y: <%= (result[4].ratio/sumP)*100 %>, indexLabel: "<%= result[4].Nationality %>"},
+						{y: <%= (result[5].ratio/sumP)*100 %>, indexLabel: "<%= result[5].Nationality %>"},
+						{y: <%= (result[6].ratio/sumP)*100 %>, indexLabel: "<%= result[6].Nationality %>"},
+						{y: <%= (result[7].ratio/sumP)*100 %>, indexLabel: "<%= result[7].Nationality %>"},
+						{y: <%= (result[8].ratio/sumP)*100 %>, indexLabel: "<%= result[8].Nationality %>"},
+						{y: <%= (result[9].ratio/sumP)*100 %>, indexLabel: "<%= result[9].Nationality %>"},
 						{y: <%= (otherP/sumP)*100 %>, indexLabel: "Other"}
 				];
 				chart.render();
