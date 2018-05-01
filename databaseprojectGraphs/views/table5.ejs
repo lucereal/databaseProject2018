@@ -26,17 +26,17 @@
 				chart.options.data = [];
 				chart.options.data.push(series1);
 				series1.dataPoints = [
-						{y: <%= result[0].numPlayers/sumP %>, indexLabel: "<%= result[0].Country %>"},
-						{y: <%= result[1].numPlayers/sumP %>, indexLabel: "<%= result[1].Country %>"},
-						{y: <%= result[2].numPlayers/sumP %>, indexLabel: "<%= result[2].Country %>"},
-						{y: <%= result[3].numPlayers/sumP %>, indexLabel: "<%= result[3].Country %>"},
-						{y: <%= result[4].numPlayers/sumP %>, indexLabel: "<%= result[4].Country %>"},
-						{y: <%= result[5].numPlayers/sumP %>, indexLabel: "<%= result[5].Country %>"},
-						{y: <%= result[6].numPlayers/sumP %>, indexLabel: "<%= result[6].Country %>"},
-						{y: <%= result[7].numPlayers/sumP %>, indexLabel: "<%= result[7].Country %>"},
-						{y: <%= result[8].numPlayers/sumP %>, indexLabel: "<%= result[8].Country %>"},
-						{y: <%= result[9].numPlayers/sumP %>, indexLabel: "<%= result[9].Country %>"},
-						{y: <%= otherP/sumP %>, indexLabel: "Other"}
+						{y: <%= (result[0].numPlayers/sumP)*100 %>, indexLabel: "<%= result[0].Country %>"},
+						{y: <%= (result[1].numPlayers/sumP)*100 %>, indexLabel: "<%= result[1].Country %>"},
+						{y: <%= (result[2].numPlayers/sumP)*100 %>, indexLabel: "<%= result[2].Country %>"},
+						{y: <%= (result[3].numPlayers/sumP)*100 %>, indexLabel: "<%= result[3].Country %>"},
+						{y: <%= (result[4].numPlayers/sumP)*100 %>, indexLabel: "<%= result[4].Country %>"},
+						{y: <%= (result[5].numPlayers/sumP)*100 %>, indexLabel: "<%= result[5].Country %>"},
+						{y: <%= (result[6].numPlayers/sumP)*100 %>, indexLabel: "<%= result[6].Country %>"},
+						{y: <%= (result[7].numPlayers/sumP)*100 %>, indexLabel: "<%= result[7].Country %>"},
+						{y: <%= (result[8].numPlayers/sumP)*100 %>, indexLabel: "<%= result[8].Country %>"},
+						{y: <%= (result[9].numPlayers/sumP)*100 %>, indexLabel: "<%= result[9].Country %>"},
+						{y: <%= (otherP/sumP)*100 %>, indexLabel: "Other"}
 				];
 				chart.render();
 			}
